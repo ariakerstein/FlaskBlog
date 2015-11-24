@@ -14,7 +14,6 @@
     <script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
     <script src="{{ url_for('static', filename='js/imagesloaded.pkgd.min.js') }}"></script>
     <script src="{{ url_for('static', filename='js/masonry.pkgd.min.js') }}"></script>
-    <script src="{{ url_for('static', filename='js/notes.js') }}"></script>
 
     {% block extra_scripts %}{% endblock %}
   </head>
@@ -54,32 +53,47 @@
 <div class="container content">
 <!-- <div class="jumbotron"> -->
   <div class="page-header"><h1>Distraqt<h4><p><i>Play your work. Achieve flow.</p></i></h4></h1>
-
+<!-- <button type="button" class="btn btn-primary pull-right" data-toggle="modal" data-target="#exampleModal">Let's Flow!</button> -->
 </div>
 </div>
-</div>
+<!-- </div> -->
 
 
     <div class="container">
       {% for category, message in get_flashed_messages(with_categories=true) %}
         <div class="alert alert-{{ category }} alert-dismissable">
           <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-          <p>{{ message }}</p>
+          <p><b>{{ message }}</b></p>
+          <br></br>
         </div>
       {% endfor %}
 
-      {% block page_header %}
-<!--         <div class="page-header">
-          <h1>{% block content_title %}{% endblock %}</h1>
-        </div> -->
+      {% block page_header %}<br>
+        <!-- Large modal -->
+<!-- <button type="button" class="btn btn-primary" data-toggle="modal" 
+data-target=".bs-example-modal-lg">Let's Flow!</button><br></br>
+
+<div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      ... -->
+<!--     </div>
+  </div>
+</div> -->
+
+
+      </br> {% endblock %}
+
+      {% block content %}
+<br></br>
       {% endblock %}
 
-      {% block content %}{% endblock %}
-
+{% block footer %}
       <footer>
         <hr />
         <p>Ari Akerstein, &copy; 2015</p>
       </footer>
+{% endblock %}
     </div>
   </body>
 </html>

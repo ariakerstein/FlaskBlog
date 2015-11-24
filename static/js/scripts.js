@@ -25,18 +25,20 @@ function checkStatus() {
     $('#pause').addClass('disabled');
     $('#reset').addClass('disabled');
     $('#myAlert').hide();
-    $('#myAlert-fail').hide()
-    $('#save').hide();
+    // $('#myAlert-fail').hide()
+    $('#saveEntry').hide();
     $('.col-xs-6').show();
+    $('.modal-header').hide();
     // $('#result').hide();
     } else {
     $('#pause').removeClass('disabled');
     $('#reset').removeClass('disabled');
     $('#start').addClass('disabled');
-    $('#save').hide();
+    $('#saveEntry').hide();
     $('#myAlert').hide();
-    $('#myAlert-fail').hide();
-    $('.col-xs-6').hide();
+    // $('#myAlert-fail').hide();
+    $('.col-xs-6').show();
+    $('.modal-header').show();
     // $('#result').show();
     }
 }
@@ -60,10 +62,10 @@ function startTimer() {
     workTime--;
     if (workTime < 0) {
       clearInterval(timer);
-      $('#save').show();
+      $('#saveEntry').show();
       // alert("You're done!");
       $('#myAlert').show();
-      $('#myAlert-fail').hide()
+      // $('#myAlert-fail').hide()
       // $('#result').show();
     } else {
       showTime(workTime);
@@ -80,7 +82,9 @@ function startTimer() {
     // breakTime = $('#break').val()*60;
    working = true;
    $('#myAlert').hide();
-   $('#myAlert-fail').hide()
+   $('#start').hide();
+   
+   // $('#myAlert-fail').hide()
    // $('#result').show();
    checkStatus();    
     timer = startTimer();
@@ -95,11 +99,11 @@ function startTimer() {
     $('#pause').addClass('resume');
     $('#pause').removeClass('pause');
     $('.resume').click(resume);
-    $('#save').show();
+    $('#saveEntry').show();
     $('#myAlert').hide();
-    $('#myAlert-fail').hide()
+    $('#start').hide();
+    // $('#myAlert-fail').hide()
     // $('#result').show();
-    // $('#save').unbind().click(resume);
    }
   
   function resume(){  
@@ -107,10 +111,11 @@ function startTimer() {
     $('#pause').html('Pause');
     $('#pause').addClass('pause');
     $('#pause').removeClass('resume');
-	$('#save').hide();
+	$('#saveEntry').hide();
     timer = startTimer();
     $('#myAlert').hide();
-    $('#myAlert-fail').hide()
+    $('#start').hide();
+    // $('#myAlert-fail').hide()
     // $('#result').show();
     }
   //What happens when #reset is pressed
@@ -123,7 +128,8 @@ function startTimer() {
     // $('.jumbotron').css('visibility', 'hidden');
     $('#msg').html("");
     $('#myAlert').hide();
-    $('#myAlert-fail').hide()
+    $('#start').show();
+    // $('#myAlert-fail').hide()
     // $('#result').hide();
   }
   //Break Timer

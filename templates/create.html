@@ -4,11 +4,49 @@
 
 {% block content_title %}Create entry{% endblock %}
 
+{% block page_header %}{% endblock %}
+
 {% block content %}
-  <form action="{{ url_for('create') }}" class="form-horizontal" method="post">
+    <script src="{{ url_for('static', filename='js/scripts.js') }}"></script>
+
+<!--     -->
+
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h1 class="modal-title" id='msg' class='text-center'></h1>
+        <h1 class="modal-title" id='time' class='text-center'></h1>
+        <h1 class="modal-title" id='alert' class='text-center'></h1>
+        <h2 id="result"></h2>
+</div>
+<div class="modal-body">
+
+<div id = "myAlert" class = "alert alert-success">
+   <a href = "#" class = "close" data-dismiss = "alert">&times;</a>
+   <strong>Awesome. You're Done!</strong>
+</div>
+
+<!-- <div id = "myAlert-fail" class = "alert alert-danger">
+   <a href = "#" class = "close" data-dismiss = "alert">&times;</a>
+   <strong>Enter a note!</strong>
+</div> -->
+
+  <div class='row'>
+    <div class='col-xs-6'>
+      <label for='work'>Flow (min): </label>
+          <input autofocus id='work' type='text' min=0 max=200 value='25' >
+
+  <div class="btn-group" role="group" >
+      <button id='start' class='btn btn-primary center-block'>Start</button>
+      <button id='pause' class='btn btn-primary center-block pause'>Pause</button>
+      <button id='reset' class='btn btn-primary center-block'>Reset</button>
+    </div><!--Row Closer-->
+  </div>
+  <br></br>
+
+   <form action="{{ url_for('create') }}" class="form-horizontal" method="post">
         <div class="form-group">
       <div class="col-sm-offset-2 col-sm-10">
-        <button class="btn btn-primary" type="submit">Create</button>
+        <button class="btn btn-primary" id="saveEntry" type="submit">Create</button>
         <a class="btn btn-default" href="{{ url_for('index') }}">Cancel</a>
       </div>
     </div>
@@ -19,7 +57,6 @@
             <input name="published" type="checkbox" value="y"> Published?
           </label>
 
-<button type="button" class="btn btn-lg btn-primary pull-right" data-toggle="modal" data-target="#exampleModal">Let's Flow!</button>
         
     <div class="form-group">
       <label for="title" class="col-sm-2 control-label">Title</label>
@@ -37,4 +74,7 @@
       </div>
     </div>
   </form>
+
 {% endblock %}
+
+
