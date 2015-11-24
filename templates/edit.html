@@ -5,6 +5,11 @@
 {% block content_title %}Edit entry{% endblock %}
 
 {% block content %}
+
+<div class="container content">
+<div class="jumbotron">
+
+
   <form action="{{ url_for('edit', slug=entry.slug) }}" class="form-horizontal" method="post">
     <div class="form-group">
       <label for="title" class="col-sm-2 control-label">What will you work on?</label>
@@ -34,4 +39,8 @@
       </div>
     </div>
   </form>
+
+</div>
+</div>
+
 {% endblock %}
