@@ -25,6 +25,8 @@ function checkStatus() {
     $('#pause').addClass('disabled');
     $('#reset').addClass('disabled');
     $('#myAlert').hide();
+    $('#work').show();
+ 
     // $('#myAlert-fail').hide()
     $('#saveEntry').hide();
     $('.col-xs-6').show();
@@ -42,6 +44,8 @@ function checkStatus() {
     $('.col-xs-6').show();
     $('.modal-header').show();
     $('.page-header').hide();
+    $('#work').hide();
+
     // $('#result').show();
     }
 }
@@ -64,10 +68,18 @@ function startTimer() {
     console.log("Flow Timer...")
     workTime--;
     if (workTime < 0) {
+    alert("Great job! You're done");
+    // alert = require('alert')
+    // alert() // Plays default alert "bottle"
+    // alert.volume(0.5)
       clearInterval(timer);
       $('#saveEntry').show();
       // alert("You're done!");
       $('#myAlert').show();
+      $('#work').show();
+      // $alert('purr')
+      // alert = require('alert')
+
       // $('#myAlert-fail').hide()
       // $('#result').show();
     } else {
@@ -87,7 +99,7 @@ function startTimer() {
    $('#myAlert').hide();
    $('#start').hide();
    $('.page-header').hide();
-   
+   $('#work').hide();
    // $('#myAlert-fail').hide()
    // $('#result').show();
    checkStatus();    
@@ -107,6 +119,7 @@ function startTimer() {
     $('#myAlert').hide();
     $('#start').hide();
     $('.page-header').hide();
+    // $('#work').hide();
     // $('#myAlert-fail').hide()
     // $('#result').show();
    }
@@ -121,6 +134,7 @@ function startTimer() {
     $('#myAlert').hide();
     $('#start').hide();
     $('.page-header').hide();
+    // $('#work').hide();
     // $('#myAlert-fail').hide()
     // $('#result').show();
     }
@@ -136,6 +150,7 @@ function startTimer() {
     $('#myAlert').hide();
     $('#start').show();
     $('.page-header').hide();
+    $('#work').show();
     // $('#myAlert-fail').hide()
     // $('#result').hide();
   }
