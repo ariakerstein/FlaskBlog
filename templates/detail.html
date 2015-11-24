@@ -11,6 +11,10 @@
 {% endblock %}
 
 {% block content %}
-  <p>Created {{ entry.timestamp.strftime('%m/%d/%Y at %G:%I%p') }}</p>
+<div class="container content">
+<div class="jumbotron">
+  <p>Created {{ entry.timestamp.strftime('%Y-%m-%d, %I:%M %p') }}</p>
   {{ entry.html_content }}
 {% endblock %}
+</div>
+</div>
