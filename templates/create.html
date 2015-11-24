@@ -30,10 +30,11 @@
    <strong>Enter a note!</strong>
 </div> -->
 
-  <div class='row'>
-    <div class='col-xs-6'>
+  <div class='container-fluid'>
+    <div class='col-xs-12'>
       <label for='work'>Flow (min): </label>
           <input autofocus id='work' type='text' min=0 max=200 value='25' >
+
 
   <div class="btn-group" role="group" >
       <button id='start' class='btn btn-primary center-block'>Start</button>
@@ -42,21 +43,30 @@
     </div><!--Row Closer-->
   </div>
   <br></br>
+</div>
+
+<div class="container content">
+<div class="jumbotron">
+<!--   <div class="page-header"> -->
+<!--   <h1>Distraqt</h1> -->
 
    <form action="{{ url_for('create') }}" class="form-horizontal" method="post">
         <div class="form-group">
       <div class="col-sm-offset-2 col-sm-10">
-        <button class="btn btn-primary pull-right" id="saveEntry" type="submit">Create</button>
+        <button class="btn btn-primary pull-right" id="saveEntry" type="submit">Save it!
+        <span class="glyphicon glyphicon-plus">
+        </button>
         <a class="btn btn-default pull-right" href="{{ url_for('index') }}">Cancel</a>
-      </div>
-    </div>
+  <div class="container-fluid">
     <div class="form-group">
       <div class="col-sm-offset-2 col-sm-10">
         <div class="checkbox">
           <label>
             <input name="published" type="checkbox" value="y">Publish
           </label>
-
+            </div>
+    </div>
+    </div>
         
     <div class="form-group">
       <label for="title" class="col-sm-2 control-label">Title</label>
@@ -74,6 +84,8 @@
       </div>
     </div>
   </form>
+</div>
+</div>
 
 {% endblock %}
 

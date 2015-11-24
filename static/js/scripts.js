@@ -29,6 +29,8 @@ function checkStatus() {
     $('#saveEntry').hide();
     $('.col-xs-6').show();
     $('.modal-header').hide();
+    $('.page-header').hide();
+    
     // $('#result').hide();
     } else {
     $('#pause').removeClass('disabled');
@@ -39,6 +41,7 @@ function checkStatus() {
     // $('#myAlert-fail').hide();
     $('.col-xs-6').show();
     $('.modal-header').show();
+    $('.page-header').hide();
     // $('#result').show();
     }
 }
@@ -83,6 +86,7 @@ function startTimer() {
    working = true;
    $('#myAlert').hide();
    $('#start').hide();
+   $('.page-header').hide();
    
    // $('#myAlert-fail').hide()
    // $('#result').show();
@@ -102,6 +106,7 @@ function startTimer() {
     $('#saveEntry').show();
     $('#myAlert').hide();
     $('#start').hide();
+    $('.page-header').hide();
     // $('#myAlert-fail').hide()
     // $('#result').show();
    }
@@ -115,6 +120,7 @@ function startTimer() {
     timer = startTimer();
     $('#myAlert').hide();
     $('#start').hide();
+    $('.page-header').hide();
     // $('#myAlert-fail').hide()
     // $('#result').show();
     }
@@ -129,6 +135,7 @@ function startTimer() {
     $('#msg').html("");
     $('#myAlert').hide();
     $('#start').show();
+    $('.page-header').hide();
     // $('#myAlert-fail').hide()
     // $('#result').hide();
   }
