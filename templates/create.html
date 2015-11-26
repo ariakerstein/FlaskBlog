@@ -11,9 +11,9 @@
 
 <!--     -->
 
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h1 class="modal-title" id='msg' class='text-center'></h1>
+      <div class="panel-body">
+        <button type="button" class="close" id="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h1 class="modal-title" id='msg' class='text-center col-centered'></h1>
         <h1 class="modal-title" id='time' class='text-center'></h1>
         <h1 class="modal-title" id='alert' class='text-center'></h1>
         <h2 id="result"></h2>
@@ -29,13 +29,10 @@
    <a href = "#" class = "close" data-dismiss = "alert">&times;</a>
    <strong>Enter a note!</strong>
 </div> -->
-
-  <div class='container-fluid'>
-    <div class='col-xs-12'>
-      <label for='work'>Flow (min): </label>
+<div class="panel panel-default">
+  <div class="panel-body">
+            <label for='work'>Flow (min): </label>
           <input autofocus id='work' type='text' min=0 max=200 value='25' >
-
-
   <div class="btn-group" role="group" >
       <button id='start' class='btn btn-primary center-block'>
 <span class="glyphicon glyphicon-play">
@@ -46,8 +43,16 @@
       <button id='reset' class='btn btn-primary center-block'>Reset</button>
     </div><!--Row Closer-->
   </div>
-  <br></br>
+
 </div>
+  </div>
+</div>
+</div>
+
+
+<!--   <div class='container-fluid'>
+    <div class='col-xs-12'> -->
+
 
 <div class="container content">
 <div class="jumbotron">
@@ -63,8 +68,8 @@
         <a class="btn btn-default pull-right" href="{{ url_for('index') }}">Cancel</a>
   <div class="container-fluid">
     <div class="form-group">
-      <div class="col-sm-offset-2 col-sm-10">
-        <div class="checkbox">
+<!--       <div class="col-sm-offset-2 col-sm-10">
+        <div class="checkbox"> -->
           <label>
             <input name="published" type="checkbox" value="y">Publish
           </label>
@@ -72,16 +77,17 @@
     </div>
     </div>
         
+
     <div class="form-group">
       <label for="title" class="col-sm-2 control-label">Title</label>
       <div class="col-sm-10">
-        <input class="form-control" id="title" name="title" type="text" value="{{ request.form.get('title', '') }}">
+        <input class="form-control" id="title" placeholder="What are you working on?" name="title" type="text" value="{{ request.form.get('title', '') }}">
       </div>
     </div>
     <div class="form-group">
       <label for="Content" class="col-sm-2 control-label">Flow notes</label>
       <div class="col-sm-10">
-        <textarea class="form-control" id="content" name="content" style="height: 300px;">{{ request.form.get('content', '') }}</textarea>
+        <textarea class="form-control" id="content" placeholder="Enter notes here" name="content" style="height: 300px;">{{ request.form.get('content', '') }}</textarea>
       </div>
     </div>
         </div>

@@ -33,7 +33,7 @@
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
             {% if session.logged_in %}
-              <li><a href="{{ url_for('drafts') }}">Drafts</a></li>
+<!--               <li><a href="{{ url_for('drafts') }}">Drafts</a></li> -->
               <li><a href="{{ url_for('create') }}">Flow!</a></li>
               <li><a href="{{ url_for('logout') }}">Log out</a></li>
             {% endif %}
@@ -52,8 +52,14 @@
 
 <div class="container content">
 <!-- <div class="jumbotron"> -->
-  <div class="page-header"><h1>Distraqt<h4><p><i>Play your work. Achieve flow.</p></i></h4></h1>
-<!-- <button type="button" class="btn btn-primary pull-right" data-toggle="modal" data-target="#exampleModal">Let's Flow!</button> -->
+  <div class="page-header"><h1>Distraqt<h4><p><i>Play your work. <!-- Train your focus.  -->Flow more.</p></i></h4></h1>
+
+<!-- <button type="button" class="btn btn-primary" <a href="/create.html"></a>Let's Flow!</button> -->
+
+<a
+        <button type="button" class="btn btn-primary pull-right"
+        href="{{ url_for('create') }}">Let's Flow!</a></button>
+        <br></br>
 </div>
 </div>
 <!-- </div> -->
@@ -76,6 +82,7 @@
       <br></br>
       {% endblock %}
 </div>
+
 {% block footer %}
       <footer>
         <hr />

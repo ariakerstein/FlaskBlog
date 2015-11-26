@@ -26,12 +26,14 @@ function checkStatus() {
     $('#reset').addClass('disabled');
     $('#myAlert').hide();
     $('#work').show();
+    // $('#label').show();
  
     // $('#myAlert-fail').hide()
     $('#saveEntry').hide();
     $('.col-xs-6').show();
     $('.modal-header').hide();
     $('.page-header').hide();
+    $('.close').hide();
     
     // $('#result').hide();
     } else {
@@ -45,6 +47,7 @@ function checkStatus() {
     $('.modal-header').show();
     $('.page-header').hide();
     $('#work').hide();
+    // $('#label').hide();
 
     // $('#result').show();
     }
@@ -77,6 +80,7 @@ function startTimer() {
       // alert("You're done!");
       $('#myAlert').show();
       $('#work').show();
+      // $('#label').show();
       // $alert('purr')
       // alert = require('alert')
 
@@ -100,6 +104,7 @@ function startTimer() {
    $('#start').hide();
    $('.page-header').hide();
    $('#work').hide();
+   // $('#label').hide();
    // $('#myAlert-fail').hide()
    // $('#result').show();
    checkStatus();    
@@ -129,7 +134,7 @@ function startTimer() {
     $('#pause').html('Pause');
     $('#pause').addClass('pause');
     $('#pause').removeClass('resume');
-	$('#saveEntry').hide();
+	  $('#saveEntry').hide();
     timer = startTimer();
     $('#myAlert').hide();
     $('#start').hide();
@@ -151,6 +156,7 @@ function startTimer() {
     $('#start').show();
     $('.page-header').hide();
     $('#work').show();
+    // $('#label').show();
     // $('#myAlert-fail').hide()
     // $('#result').hide();
   }
