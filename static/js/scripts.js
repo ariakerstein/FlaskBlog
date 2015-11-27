@@ -26,13 +26,12 @@ function checkStatus() {
     $('#reset').addClass('disabled');
     $('#myAlert').hide();
     $('#work').show();
-    // $('#label').show();
- 
-    // $('#myAlert-fail').hide()
     $('#saveEntry').hide();
+    $('#checkbox').hide();
     $('.col-xs-6').show();
     $('.modal-header').hide();
     $('.page-header').hide();
+    $('#JumbotronBrand').hide();
     $('.close').hide();
     
     // $('#result').hide();
@@ -41,6 +40,7 @@ function checkStatus() {
     $('#reset').removeClass('disabled');
     $('#start').addClass('disabled');
     $('#saveEntry').hide();
+    $('#checkbox').hide();
     $('#myAlert').hide();
     // $('#myAlert-fail').hide();
     $('.col-xs-6').show();
@@ -77,6 +77,7 @@ function startTimer() {
     // alert.volume(0.5)
       clearInterval(timer);
       $('#saveEntry').show();
+      $('#checkbox').show();
       // alert("You're done!");
       $('#myAlert').show();
       $('#work').show();
@@ -121,6 +122,7 @@ function startTimer() {
     $('#pause').removeClass('pause');
     $('.resume').click(resume);
     $('#saveEntry').show();
+    $('#checkbox').show();
     $('#myAlert').hide();
     $('#start').hide();
     $('.page-header').hide();
@@ -135,6 +137,7 @@ function startTimer() {
     $('#pause').addClass('pause');
     $('#pause').removeClass('resume');
 	  $('#saveEntry').hide();
+    $('#checkbox').show();
     timer = startTimer();
     $('#myAlert').hide();
     $('#start').hide();

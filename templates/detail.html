@@ -6,15 +6,21 @@
 
 {% block extra_header %}
   {% if session.logged_in %}
-    <li><a href="{{ url_for('edit', slug=entry.slug) }}">Edit entry</a></li>
+    <li><a href="{{ url_for('edit', slug=entry.slug) }}">Edit Entry</a></li>
   {% endif %}
 {% endblock %}
 
 {% block content %}
-<div class="container content">
-<div class="jumbotron">
+<div class="panel panel-default">
+  <div class="panel-heading">
+  <h3 class="panel-title">
   <p><b>{{ entry.timestamp.strftime('%Y-%m-%d, %I:%M %p') }}</b></p>
+      </h3>
+     <div class="panel-footer">
   {{ entry.html_content }}
+  </div>
+  </div>
+  </div>
 {% endblock %}
 </div>
 </div>

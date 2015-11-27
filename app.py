@@ -62,6 +62,13 @@ class Entry(flask_db.Model):
     published = BooleanField(index=True)
     timestamp = DateTimeField(default=datetime.datetime.now, index=True)
 
+# class Tag(flask_db.Model):
+#     tag = CharField()
+
+# class BlogEntryTags(flask_db.Model):
+#     Entry = ForeignKeyField(Entry)
+#     tag = ForeignKeyField(Tag)
+
     @property
     def html_content(self):
         """
