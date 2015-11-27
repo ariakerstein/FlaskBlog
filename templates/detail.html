@@ -14,10 +14,11 @@
 <div class="panel panel-default">
   <div class="panel-heading">
   <h3 class="panel-title">
-  <p><b>{{ entry.timestamp.strftime('%Y-%m-%d, %I:%M %p') }}</b></p>
-      </h3>
+  <p><b>{{ entry.title }}</b></p></h3>
+  <i>{{ entry.timestamp.strftime('%Y-%m-%d, %I:%M %p') }}</i>
+      
      <div class="panel-footer">
-  {{ entry.html_content }}
+       {{ entry.html_content }} 
   </div>
   </div>
   </div>
