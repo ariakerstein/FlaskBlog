@@ -14,7 +14,6 @@ checkStatus();
   //Test Vars
 
 /*  Alternate Method of 'checkStatus Function'
-
 working ? $('#pause').addClass('disabled')&& $('#start').removeClass('disabled'): $('#start').addClass('disabled')&& $('#pause').removeClass('disabled');
  */
 
@@ -136,7 +135,7 @@ function startTimer() {
     $('#pause').html('Pause');
     $('#pause').addClass('pause');
     $('#pause').removeClass('resume');
-	  $('#saveEntry').hide();
+    $('#saveEntry').hide();
     $('#checkbox').show();
     timer = startTimer();
     $('#myAlert').hide();
@@ -409,16 +408,16 @@ function startTimer() {
 
 
 // var shoppingList = [
-// 	'carrots', 
-// 	'oranges',
-// 	]
+//  'carrots', 
+//  'oranges',
+//  ]
 
 // console.log(shoppingList[0]);
 
 // var html = '';
 
 // for ( var i = 1; i <= 10; i += 1) {
-// 	html += <'div>' + i + '</div';
+//  html += <'div>' + i + '</div';
 // }
 // document.write(html);
 
@@ -433,8 +432,8 @@ function startTimer() {
 // }
 
 // while ( guess !== randomNumber ) {
-// 	guess = getRandomNumber( upper );
-// 	attempts += 1;
+//  guess = getRandomNumber( upper );
+//  attempts += 1;
 // }
 // document.write("<p>The random number was: " + rnadomNumber + "<p>");
 // document.write("<p>It took the computer: " + " attempts to get it right.</p>");
@@ -447,28 +446,28 @@ function startTimer() {
 // var correctGuess = false;
 
 // function getRandomNumber( upper ) {
-// 	var num = Math.floor(Math.random() * upper) + 1;
-// 	return num;
+//  var num = Math.floor(Math.random() * upper) + 1;
+//  return num;
 // // }
 
 // do {
-// 	guess = prompt('I am thinking of a number between 1 and 10. What is it?');
-// 	guessCount += 1;
-// 	if (parseInt(guess) === randomNumber) {
-// 			correctGuess = true;
-// 	}
+//  guess = prompt('I am thinking of a number between 1 and 10. What is it?');
+//  guessCount += 1;
+//  if (parseInt(guess) === randomNumber) {
+//      correctGuess = true;
+//  }
 // } while ( ! correctGuess)
 // document.write('<h1>You guessed the number!</h1>');
 // document.write('It took you ' + guessCount + ' tries' + randomNumber);
 
 
 // while ( guessCount < 10 ) {
-// 	guess = prompt('I am thinking of a number between 1 and 10. What is it?');
-// 	guessCount += 1;
-// 	if (parseInt(guess) === randomNumber) {
-// 			correctGuess = true;
-// 	break
-// 	}
+//  guess = prompt('I am thinking of a number between 1 and 10. What is it?');
+//  guessCount += 1;
+//  if (parseInt(guess) === randomNumber) {
+//      correctGuess = true;
+//  break
+//  }
 // } 
 // if (correctGuess) {
 // document.write('<h1>You guessed the number!</h1>');
@@ -489,7 +488,7 @@ function startTimer() {
 // // }
 
 // for (var i = 0; i < 10; i +=1 ){
-// 	document.write( counter );
+//  document.write( counter );
 // }
 
 
@@ -523,7 +522,7 @@ function startTimer() {
 // var html = '';
 
 // for ( var i = 1; i <= 10; i += 1) {
-// 	html += <'div>' + i + '</div';
+//  html += <'div>' + i + '</div';
 // }
 // document.write(html);
 
@@ -538,8 +537,8 @@ function startTimer() {
 // }
 
 // while ( guess !== randomNumber ) {
-// 	guess = getRandomNumber( upper );
-// 	attempts += 1;
+//  guess = getRandomNumber( upper );
+//  attempts += 1;
 // }
 // document.write("<p>The random number was: " + rnadomNumber + "<p>");
 // document.write("<p>It took the computer: " + " attempts to get it right.</p>");
@@ -552,16 +551,16 @@ function startTimer() {
 // var correctGuess = false;
 
 // function getRandomNumber( upper ) {
-// 	var num = Math.floor(Math.random() * upper) + 1;
-// 	return num;
+//  var num = Math.floor(Math.random() * upper) + 1;
+//  return num;
 // }
 
 // do {
-// 	guess = prompt('I am thinking of a number between 1 and 10. What is it?');
-// 	guessCount += 1;
-// 	if (parseInt(guess) === randomNumber) {
-// 			correctGuess = true;
-// 	}
+//  guess = prompt('I am thinking of a number between 1 and 10. What is it?');
+//  guessCount += 1;
+//  if (parseInt(guess) === randomNumber) {
+//      correctGuess = true;
+//  }
 // } while ( ! correctGuess)
 // document.write('<h1>You guessed the number!</h1>');
 // document.write('It took you ' + guessCount + ' tries' + randomNumber);
@@ -579,7 +578,7 @@ function startTimer() {
 // // }
 
 // for (var i = 0; i < 10; i +=1 ){
-// 	document.write( counter );
+//  document.write( counter );
 // }
 
 
