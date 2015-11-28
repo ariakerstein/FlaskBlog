@@ -2,6 +2,8 @@
 
 {% block title %}Create entry{% endblock %}
 
+            {% block extra_header %}{% endblock %}
+
 {% block content_title %}Create entry{% endblock %}
 
 {% block page_header %}{% endblock %}
@@ -20,9 +22,9 @@
 </div>
 <!-- <div class="modal-body"> -->
 
-<div id = "myAlert" class = "alert alert-success">
+<div id = "myAlert" class = "page-header">
    <a href = "#" class = "close" data-dismiss = "alert">&times;</a>
-   <strong>Awesome. You're Done!</strong>
+   <strong>Nice work - you're done!</strong>
 </div>
 
 <!-- <div id = "myAlert-fail" class = "alert alert-danger">
@@ -86,7 +88,7 @@
     <div class="form-group">
       <label for="Content" class="col-sm-12 control-label"></label>
       <div class="col-sm-10">
-        <textarea class="form-control" id="content" placeholder="Enter notes here" name="content" style="height: 300px;">{{ request.form.get('content', '') }}</textarea>
+        <textarea class="form-control" id="content" placeholder="Enter notes here..." name="content" style="height: 300px;">{{ request.form.get('content', '') }}</textarea>
 <!--     <div class="form-group">
       <label for="category" class="col-sm-2 control-label">Category</label>
       <div class="col-sm-10">

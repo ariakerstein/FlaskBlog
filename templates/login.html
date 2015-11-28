@@ -1,5 +1,13 @@
 {% extends "base.html" %}
 
+  <!--LOAD PRE-REQUISITES FOR GOOGLE SIGN IN -->
+   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js">
+  </script>
+
+<script src="//apis.google.com/js/platform.js?onload=start"> </script>
+
+<!-- END PRE-REQUISITES FOR GOOGLE SIGN IN -->
+
 {% block title %}Log in{% endblock %}
 
 {% block content_title %}Log in{% endblock %}
@@ -18,7 +26,30 @@
       </div>
     </div>
   </form>
+
 {% endblock %}
+
+<!-- GOOGLE PLUS SIGN IN BUTTON-->
+
+  {% block page_header %}
+          <div id="signInButton">
+          <span class="g-signin"
+            data-scope="openid email"
+            data-clientid="YOUR_CLIENT_ID_GOES_HERE.apps.googleusercontent.com"
+            data-redirecturi="postmessage"
+            data-accesstype="offline"
+            data-cookiepolicy="single_host_origin"
+            data-callback="signInCallback"
+            data-approvalprompt="force">
+          </span>
+        </div>
+
+
+      <br></br> 
+      {% endblock %}
+
+<!--END GOOGLE PLUS SIGN IN BUTTON -->
+
 
 <!--test block-->
 {% block footer %} @Ari Akerstein Productions &copy; 2015{% endblock %}
