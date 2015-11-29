@@ -25,7 +25,7 @@ function checkStatus() {
     $('#reset').addClass('disabled');
     $('#myAlert').hide();
     $('#work').show();
-    $('#saveEntry').hide();
+    $('#saveEntry').show();
     $('#checkbox').hide();
     $('.col-xs-6').show();
     $('.modal-header').hide();
