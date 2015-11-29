@@ -13,6 +13,7 @@
 {% block content_title %}Log in{% endblock %}
 
 {% block content %}
+
   <form action="{{ url_for('login', next=next_url) }}" class="form-horizontal" method="post">
     <div class="form-group">
       <label for="password" class="col-sm-2 control-label">Password</label>
@@ -27,26 +28,14 @@
     </div>
   </form>
 
+<div
+  class="fb-like"
+  data-share="true"
+  data-width="450"
+  data-show-faces="true">
+</div>
 {% endblock %}
 
-<!-- GOOGLE PLUS SIGN IN BUTTON-->
-
-  {% block page_header %}
-          <div id="signInButton">
-          <span class="g-signin"
-            data-scope="openid email"
-            data-clientid="YOUR_CLIENT_ID_GOES_HERE.apps.googleusercontent.com"
-            data-redirecturi="postmessage"
-            data-accesstype="offline"
-            data-cookiepolicy="single_host_origin"
-            data-callback="signInCallback"
-            data-approvalprompt="force">
-          </span>
-        </div>
-
-
-      <br></br> 
-      {% endblock %}
 
 <!--END GOOGLE PLUS SIGN IN BUTTON -->
 

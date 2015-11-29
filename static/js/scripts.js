@@ -71,6 +71,7 @@ function startTimer() {
     workTime--;
     if (workTime < 0) {
     alert("Great job! You're done");
+    
     // alert = require('alert')
     // alert() // Plays default alert "bottle"
     // alert.volume(0.5)

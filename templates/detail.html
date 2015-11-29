@@ -29,12 +29,14 @@
   <p><b>{{ entry.title }}</b></p></h3>
   <i>{{ entry.timestamp.strftime('%Y-%m-%d, %I:%M %p') }}</i>
       
-     <div class="panel-footer">
        {{ entry.html_content }} 
   </div>
   </div>
   </div>
   {% endif %}
+  </div>
 {% endblock %}
-</div>
+
+     <div class="panel-footer">
+
 </div>

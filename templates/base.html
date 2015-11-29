@@ -19,6 +19,24 @@
   </head>
 
   <body>
+<script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '696022507201877',
+      xfbml      : true,
+      version    : 'v2.5'
+    });
+  };
+
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "//connect.facebook.net/en_US/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+</script>
+
     <div class="navbar navbar-default navbar-static-top" role="navigation">
       <div class="container">
         <div class="navbar-header">
@@ -62,6 +80,8 @@
 <div class="container content">
 <!-- <div class="jumbotron"> -->
   <div class="jumbotron" id="JumbotronBrand"><h1>Distraqt<h4><p><i>Play your work. <!-- Train your focus.  -->Flow more.</p></i></h4></h1>
+
+
 <!--insert image!-->
 <!-- <div class="row">
   <div class="col-xs-6 col-md-3">
@@ -78,10 +98,10 @@
         </span>
         </a></button>
         <br></br>
+
 </div>
 </div>
 <!-- </div> -->
-
 
       {% block page_header %}
       <br></br> 
@@ -90,6 +110,8 @@
       {% block content %}
       <br></br>
       {% endblock %}
+
+
 </div>
 
 {% block footer %}
