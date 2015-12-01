@@ -26,7 +26,7 @@ function checkStatus() {
     $('#myAlert').hide();
     $('#work').show();
     $('#saveEntry').show();
-    $('#checkbox').hide();
+    $('#checkbox').show();
     $('.col-xs-6').show();
     $('.modal-header').hide();
     $('.page-header').hide();
@@ -104,6 +104,7 @@ function startTimer() {
    $('#start').hide();
    $('.page-header').hide();
    $('#work').hide();
+   $('#work').hide();
    // $('#label').hide();
    // $('#myAlert-fail').hide()
    // $('#result').show();
@@ -158,6 +159,9 @@ function startTimer() {
     $('#start').show();
     $('.page-header').hide();
     $('#work').show();
+    // $('#pause').html('Resume');
+    // $('#pause').addClass('resume');
+    // $('#pause').removeClass('pause');
     // $('#label').show();
     // $('#myAlert-fail').hide()
     // $('#result').hide();
